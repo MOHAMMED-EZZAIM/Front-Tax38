@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-header">
+    Liste des Villes
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Code</th>
+        <th>Libellé</th>
+        <th>Action</th> <!-- Modifier "Delete" en "Action" pour inclure d'autres actions -->
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let v of listVille | null ">
+        <td>{{ v.id }}</td>
+        <td>{{ v.code }}</td>
+        <td>{{ v.libelle }}</td>
+        <td>
+          <button class="btn btn-outline-danger" (click)="handleDeleteVille(v.code)" )><i class="bi bi-trash"></i></button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
